@@ -1,0 +1,211 @@
+.master-header-wrapper {
+  .header-items-wrapper {
+    display: flex;
+    margin-right: -0.5rem;
+    @include rtl {
+      margin-right: 0;
+      margin-left: -0.5rem;
+    }
+    .header-item {
+      .MuiBadge-badge {
+        background-color: $c-red;
+      }
+      color: white;
+      background-color: #3a3a3a;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 8px;
+      .MuiButtonBase-root {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  .header-logo-wrapper {
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  .header-categories-wrapper {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .header-search-wrapper {
+      position: absolute;
+      right: 0;
+      color: white;
+      background-color: #3b3b3b;
+      margin-right: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .MuiButtonBase-root {
+        width: 2rem;
+        height: 2rem;
+      }
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 8px;
+      @include rtl {
+        right: initial;
+        left: 0;
+      }
+    }
+    .header-categories-item {
+      display: flex;
+      .header-categories-button {
+        cursor: pointer;
+        margin-right: 2rem;
+        width: auto;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        height: 1.9rem;
+        border-radius: 0.6rem;
+        color: #ececec;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.is-active {
+          background-color: #3b3b3b;
+        }
+        &:hover {
+          background-color: #494949;
+        }
+      }
+    }
+  }
+  .header-wrapper {
+    @include d-flex-v-center-h-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    min-height: 3.3rem;
+    background-color: $c-black;
+    color: $c-white;
+    z-index: 10;
+    .btns.MuiButtonBase-root {
+      &.user-button-wrapper {
+        @include phones-max {
+          margin: 0rem;
+        }
+        margin: 0 1rem;
+        padding: 0;
+        min-width: initial;
+        .user-image {
+          min-width: 35px;
+          height: 38px;
+          width: 38px;
+          border-radius: 5px;
+          border: 3px solid $c-green;
+        }
+        .user-name-wrapper {
+          @include d-inline-flex;
+          @include phones-s-max {
+            display: none !important;
+          }
+          .mdi:before {
+            background-color: #343434;
+            color: $c-gray-light;
+            border-radius: 50%;
+            margin-top: -0.1rem;
+          }
+          color: $c-gray-light;
+          margin: 0 0.5rem;
+          .user-name-text {
+            display: inline-block;
+            @include texts-truncate;
+            max-width: 6rem;
+            @include phones-max {
+              max-width: 80px !important;
+            }
+          }
+        }
+      }
+    }
+
+    .img-logo {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    .section {
+      padding: 0.5rem;
+      height: 3.3rem;
+      @include d-inline-flex-v-center;
+    }
+
+    .logo-text {
+      font-size: $fz-10px;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+      color: $c-green;
+    }
+
+    .logo-text-small {
+      font-size: $fz-9px;
+      color: $c-blue-light;
+
+      .text-small {
+        font-variant: small-caps;
+      }
+    }
+
+    .logo-text,
+    .logo-text-small {
+      font-family: AcuminConcept, serif;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .btns-icon:not(.btns-small) {
+      margin: 0 1rem !important;
+    }
+    .i-text-gray {
+      margin-right: 0.5rem;
+      margin-left: 1rem;
+    }
+
+    .user-img {
+      min-width: 50px;
+      max-width: 50px;
+      min-height: 50px;
+      max-height: 50px;
+      border-radius: 100%;
+    }
+
+    .user-btn {
+      position: absolute;
+      right: 0.25rem;
+      bottom: 0.25rem;
+      transform: translate(50%, -50%);
+    }
+
+    .btns-active {
+      &.mdi,
+      .mdi {
+        color: $c-secondary;
+      }
+
+      &.icons,
+      .icons {
+        filter: invert(101%) sepia(98%) saturate(545%) hue-rotate(344deg) brightness(98.5%)
+          contrast(95%);
+      }
+      &img,
+      img {
+        border: 2px solid #c7c7cc;
+        border-radius: 100%;
+      }
+    }
+  }
+}

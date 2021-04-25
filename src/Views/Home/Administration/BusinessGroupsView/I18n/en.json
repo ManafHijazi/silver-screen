@@ -1,0 +1,44 @@
+{
+  "NotificationErrorView": "View Groups Failed",
+  "AddGroup": "Add Group",
+  "SearchGroup": "Search Group",
+  "Username": "Username",
+  "Add": "Add",
+  "Edit": "Edit",
+  "Delete": "Delete",
+  "ListViewGroups": {
+    "GroupName": "Group Name",
+    "GroupParent": "Group Parent",
+    "Actions": "Actions"
+  },
+  "AddDialog": {
+    "EditBusinessGroup": "Edit Business Group",
+    "BusinessGroupParent": "Business Group Parent",
+    "AddBusinessGroup": "Add Business Group",
+    "BusinessGroups": "Organizational chart",
+    "Division": "Division",
+    "Notes": "Notes",
+    "Cancel": "Cancel",
+    "AddNewGroup": "Add New Group",
+    "NotificationAddGroup": "Add New Groups Successfully",
+    "NotificationErrorAdd": "Add Group Failed",
+    "select": "Select"
+  },
+  "DeleteDialog": {
+    "DeleteText": "Are you sure you want to delete",
+    "Cancel": "Cancel",
+    "Confirm": "Confirm",
+    "NotificationDeleteGroup": "Delete Groups Successfully",
+    "NotificationErrorDelete": "Delete Failed "
+  },
+  "EditDialog": {
+    "EditBusinessGroup": "Edit BusinessGroup ",
+    "BusinessGroupName": "Business GroupName",
+    "Division": "Division",
+    "Notes": "Notes",
+    "Cancel": "Cancel",
+    "Save": "Save",
+    "NotificationEditeGroup": "Save successfully",
+    "NotificationErrorEdit": "Edit Filed  "
+  }
+}

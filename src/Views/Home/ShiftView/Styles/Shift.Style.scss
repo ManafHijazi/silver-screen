@@ -1,0 +1,77 @@
+.Shift-View-wraperr {
+  .hedar-title {
+    font-size: 14px;
+    padding: 12px 12px 12px 44px;
+    font-weight: bold;
+  }
+
+  .card-wraper {
+    padding: 9px;
+  }
+  .card-container {
+    width: 23rem;
+    height: 8rem;
+    display: inline-flex;
+    border-radius: 19px;
+    background-color: #f4f4f4 !important;
+    -webkit-border-radius: 19px;
+    -moz-border-radius: 19px;
+    -ms-border-radius: 19px;
+    -o-border-radius: 19px;
+    padding: 36px;
+  }
+
+  .Shiftname {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .Shifttime {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: bolder;
+  }
+  .Shift-OPTONS {
+    .MuiFab-root {
+      box-shadow: none !important;
+    }
+
+    .MuiFab-sizeSmall {
+      width: 35px !important;
+      height: 35px !important;
+    }
+    padding-left: 60px;
+    padding-top: 5px;
+    @include rtl {
+      padding-right: 60px;
+      padding-left: 0px;
+    }
+  }
+
+  .OPTONS-conteaner {
+    margin-left: 10px;
+    @include rtl {
+      margin-right: 10px;
+      margin-left: 0px;
+    }
+  }
+  .cards-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-top: 0.4rem;
+    padding-bottom: 0.7rem;
+    justify-content: center;
+    width: 100%;
+    @include laptops-max {
+      justify-content: center;
+    }
+
+    @include phones-max {
+      justify-content: center;
+    }
+  }
+  .card {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+  }
+}

@@ -1,0 +1,146 @@
+.Team-View-wraperr {
+  .text-title {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .card-wraper {
+    padding: 9px;
+    display: f;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card-container-parent {
+    display: flex;
+    justify-content: center;
+  }
+  .card-container {
+    .Edit {
+      @include rtl {
+        margin-left: 0px;
+        margin-right: 12px;
+      }
+      margin-bottom: 7px;
+      margin-left: 12px;
+    }
+    .MuiFab-root {
+      box-shadow: none !important;
+    }
+    .MuiFab-sizeSmall {
+      width: 33px !important;
+      height: 30px !important;
+    }
+    .MuiFab-root {
+      color: rgba(0, 0, 0, 0.87);
+      width: 33px !important;
+      height: 30px !important;
+      background-color: #f4f4f4;
+    }
+    width: 50rem;
+    height: 27.5rem;
+    margin: 28px;
+    display: inline-block;
+    border-radius: 19px;
+    background-color: #f4f4f4 !important;
+    -webkit-border-radius: 19px;
+    -moz-border-radius: 19px;
+    -ms-border-radius: 19px;
+    -o-border-radius: 19px;
+    padding: 23px;
+  }
+
+  .card-inner-container {
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .small-card {
+    width: 22rem;
+    height: 6rem;
+    margin: 12px;
+    border-radius: 19px;
+    background-color: #ffffff !important;
+    .user-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+    .small-card-container {
+      padding: 23px;
+      width: 100%;
+      display: inline-flex;
+    }
+    .actions-container {
+      display: flex;
+      .MuiFab-root {
+        color: rgba(0, 0, 0, 0.87);
+        width: 33px !important;
+        height: 30px !important;
+        background-color: #ffffff;
+      }
+      .act-bbt {
+        padding: 0px 10px;
+      }
+    }
+    .names-container {
+      width: 100%;
+      display: block;
+      padding: 1px 24px;
+
+      .main-text {
+        font-size: 14px;
+        font-weight: 800;
+      }
+      .scaend-text {
+        font-size: 12px;
+        color: #aa9999 !important;
+      }
+    }
+  }
+}
+.TeamView-check-header {
+  width: 100%;
+  height: 59px;
+  background-color: $c-header-primary;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .attendance-check-filter {
+    display: flex;
+    align-items: center;
+    .MuiButtonBase-root {
+      margin-right: 1rem;
+      border-radius: 0.4rem;
+      font-weight: 400;
+      @include rtl {
+        margin-right: 0;
+        margin-left: 1rem;
+      }
+    }
+    .dots-vertical {
+      .MuiButtonBase-root {
+        background-color: $c-primary;
+        color: $c-white;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    .membar-button {
+      .MuiButtonBase-root {
+        background-color: #65acfe;
+        color: $c-white;
+        width: 9rem;
+        height: 2rem;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,41 @@
+{
+  "result": [
+    {
+      "businessGroupsId": 70,
+      "businessGroupsName": "dasda",
+      "businessGroupsParentId": null,
+      "businessGroupsParentName": null
+    },
+    {
+      "businessGroupsId": 68,
+      "businessGroupsName": "head office",
+      "businessGroupsParentId": 54,
+      "businessGroupsParentName": "Psi"
+    },
+    {
+      "businessGroupsId": 57,
+      "businessGroupsName": "Test",
+      "businessGroupsParentId": 54,
+      "businessGroupsParentName": "Psi"
+    },
+    {
+      "businessGroupsId": 56,
+      "businessGroupsName": "Call Center",
+      "businessGroupsParentId": 54,
+      "businessGroupsParentName": "Psi"
+    },
+    {
+      "businessGroupsId": 55,
+      "businessGroupsName": "Sales",
+      "businessGroupsParentId": 54,
+      "businessGroupsParentName": "Psi"
+    },
+    {
+      "businessGroupsId": 54,
+      "businessGroupsName": "Psi",
+      "businessGroupsParentId": null,
+      "businessGroupsParentName": null
+    }
+  ],
+  "totalCount": 6
+}

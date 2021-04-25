@@ -1,0 +1,49 @@
+.ListAddInput {
+  margin-top: 0.5rem;
+  background-color: $c-gray-lightest;
+  padding: 4px 10px;
+}
+
+.ListItems {
+  overflow: auto;
+  max-height: 100px;
+}
+
+@media (min-width: 1920px) {
+  .ListItems {
+    max-height: 200px;
+  }
+}
+
+.ListItem {
+  padding: 10px 8px 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  .mdi::before {
+    font-size: 24px;
+    color: $c-gray-dark;
+  }
+}
+
+.ListItemLabel {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ListItemIcon {
+  margin-left: auto;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.2s ease-out;
+}
+
+.ListItem:hover {
+  background-color: #d2d2d2;
+}
+
+.ListItem:hover .ListItemIcon {
+  opacity: 1;
+}

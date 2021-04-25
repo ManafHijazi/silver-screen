@@ -1,0 +1,36 @@
+.inner-header-view-wrapper {
+  padding-left: 5rem;
+  @include rtl {
+    padding-left: 0;
+    padding-right: 5rem;
+  }
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  background-color: #4e4e4e;
+  position: fixed;
+  top: 3.3rem;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  .inner-header-view-item {
+    .header-side-menu-button {
+      cursor: pointer;
+      margin-right: 2rem;
+      width: auto;
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+      height: 1.9rem;
+      border-radius: 0.6rem;
+      color: #ececec;
+      &.is-active {
+        background-color: #e2e2e2;
+        color: $c-gray-primary;
+      }
+      &:hover {
+        background-color: #ececec;
+        color: $c-gray-primary;
+      }
+    }
+  }
+}

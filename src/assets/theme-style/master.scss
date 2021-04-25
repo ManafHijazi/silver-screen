@@ -1,0 +1,74 @@
+//============================================================
+// @todo import here any framework scss or css
+@import '~react-toastify/dist/ReactToastify.css';
+@import '~react-phone-input-2/lib/material.css';
+@import '~react-dropzone-uploader/dist/styles.css';
+@import '~@mdi/font/css/materialdesignicons.min.css';
+// @todo End Import framework scss or css
+//============================================================
+
+//============================================================
+// @todo import here Main Style With mixin and variable scss or css
+// @import '../style/style.scss';
+@import './Helpers/Helpers.Style.scss';
+@import './Theme/Theme.Style.scss';
+@import './style.scss';
+// Start Shared Component Styles
+@import '../../Components/BreadcrumbComponent/Styles/Breadcrumb.Style.scss';
+@import '../../Components/Controls/Inputs/Inputs.Style.scss';
+@import '../../Components/Controls/AutocompleteComponent/AutocompleteComponent.Style.scss';
+@import '../../Components/Controls/PhonesComponent/PhonesComponent.Style.scss';
+@import '../../Components/DialogComponent/DialogComponent.Style.scss';
+@import '../../Components/UploaderComponent/UploaderComponent.Style.scss';
+@import '../../Components/UploaderComponent/UploaderThemes/BoxThemeComponent/BoxThemeComponent.Style.scss';
+@import '../../Components/UploaderComponent/UploaderThemes/CircleThemeComponent/CircleThemeComponent.Style.scss';
+@import '../../Components/UploaderComponent/UploaderThemes/InputThemeComponent/InputThemeComponent.Style.scss';
+@import '../../Components/Controls/SelectComponent/SelectComponent.Style.scss';
+@import '../../Components/Controls/ActionsButtonsComponent/ActionsButtonsComponent.Style.scss';
+@import '../../Components/Controls/CheckboxesComponent/CheckboxesComponent.Style.scss';
+@import '../../Components/CardsComponent/CardsCompopnent.Style.scss';
+@import '../../Components/Controls/ProgressComponent/ProgressComponent.Style.scss';
+@import '../../Components/PopoverComponent/PopoverComponent.Style.scss';
+@import '../../Components/PaginationComponent/PaginationComponent.style.scss';
+@import '../../Components/TablesComponent/Tables.Style.scss';
+@import '../../Components/Controls/ProgressCircularComponent/ProgressCircularComponent.Style.scss';
+@import '../../Components/Controls/DatePickerComponent/DatePickerComponent.Style.scss';
+@import '../../Components/UploaderComponentCircular/UploaderComponentCircular.scss';
+@import '../../Components/Controls/TabsComponent/TabsComponent.Style.scss';
+@import '../../Components/Controls/RadiosGroupComponent/RadiosGroupComponent.scss';
+@import '../../Components/Controls/SwitchComponent/SwitchComponent.Style.scss';
+@import '../../Components/CalendarComponent/Styles/Calendar.Style.scss';
+@import '../../Components/LoadableImageComponant/LoadableImageStyle.scss';
+@import '../../Components/FacebookGalleryComponent/FacebookGalleryComponent.Style.scss';
+@import '../../Components/GoogleMapsComponent/Styles/GoogleMaps.Style.scss';
+@import '../../Components/Controls/StepperComponent/StepperComponent.Style.scss';
+@import '../../Components/Controls/TableColumnsFilterComponent/TableColumnsFilterComponent.Style.scss';
+@import '../../Components/TablesComponent/Sections/TableFilterComponent/TableFilterComponent.Style.scss';
+// End Shared Component Styles
+// Start Layouts Styles
+@import '../../Layouts/Home/Styles/HomeLayout.scss';
+// End Layouts Styles
+// Start Views Styles
+@import '../../Views/Home/Common/MainMenuView/Styles/MainMenuView.Style.scss';
+@import '../../Views/Home/Common/SideOpenCloseView/Styles/OpenCloseView.Style.scss';
+@import '../../Views/Home/Administration/BusinessGroupsView/BusinessGroupsUtilities/BusinessGroupsTreeView/BusinessGroupsTree.Style.scss';
+@import '../../Views/Home/Common/HeaderView/HeaderView.Style.scss';
+@import '../../Views/Account/LoginView/Login.Style.scss';
+@import '../../Views/Home/Administration/BusinessGroupsView/Styles/DeleteDialog.Style.scss';
+@import '../../Views/Home/Common/BottomBoxView/BottomBox.Style.scss';
+@import '../../Components/GoogleMapsComponent/Styles/GoogleMaps.Style.scss';
+@import '../../Views/Home/Common/ImportDetailsView/ImportDetailsUtilities/ImportDetailsComponent/ImportDetailsComponent.Style.scss';
+@import '../../Views/Home/Common/ImportDetailsView/ImportDetailsUtilities/ImportDetailsCardComponent/ImportDetailsCardComponent.Style.scss';
+@import '../../Views/Home/Common/ImportDetailsView/ImportDetailsView.Style.scss';
+@import '../../Views/Home/Common/lists/AddingList/listStyles.scss';
+@import '../../Components/InnerHeaderComponent/InnerHeaderComponent.scss';
+@import '../../Views/Home/DepartmentView/Styles/Department.Style.scss';
+@import '../../Views/Home/ShiftView/Styles/Shift.Style.scss';
+@import '../../Views/Home/PayrollView/Styles/Payroll.Style.scss';
+@import '../../Views/Home/CoursesView/Styles/Courses.Style.scss';
+@import '../../Views/Home/AttendanceCheckInView/AttendanceCheckInView.scss';
+@import '../../Views/Home/TeamView/Styles/Team.Style.scss';
+// End Views Styles
+
+// @todo End Import Main Style With mixin and variable scss
+//============================================================

@@ -1,0 +1,393 @@
+.left-side-menu-wrapper {
+  z-index: 9999;
+  position: fixed;
+  top: 3.3rem;
+  height: 100%;
+  background-color: $c-gray-primary;
+  width: 3.4rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  .left-side-menu-item {
+    .side-menu-button {
+      margin-bottom: 1.5rem;
+      width: 2.3rem;
+      height: 2.3rem;
+      border-radius: 0.7rem;
+      .mdi::before {
+        font-size: 24px;
+        color: #515151;
+      }
+      &.is-active {
+        background-color: #e2e2e2;
+        .mdi::before {
+          color: $c-black !important;
+        }
+      }
+      &:hover {
+        background-color: #ececec;
+      }
+    }
+  }
+}
+.menu-wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  .expand-icon-wrapper {
+    .MuiTouchRipple-root {
+      display: none;
+    }
+  }
+  .accordion-wrapper {
+    border-radius: 0.7rem;
+    margin-top: 0.5rem;
+  }
+  .MuiAccordionSummary-root.Mui-expanded {
+    min-height: 0;
+  }
+  .filter-by-wrapper {
+    display: flex;
+    background-color: rgb(226, 226, 226);
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    height: 3.5rem;
+    min-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-left: 0.2rem;
+    @include rtl {
+      right: initial;
+      left: 0;
+    }
+    .filter-by-title {
+      min-width: 7.5rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .mdi::before {
+      font-size: 24px;
+    }
+  }
+  .MuiSvgIcon-root {
+    @include rtl {
+      transform: scale(1);
+    }
+  }
+  .animated-open-close {
+    padding-top: 3.5rem;
+    position: fixed;
+    left: 3.4rem;
+    top: 6.3rem;
+    height: 100%;
+    transition-property: max-width, min-width, width !important;
+    transition-duration: 0.18s !important;
+    transition-timing-function: linear;
+    @include rtl {
+      left: initial;
+      right: 3.4rem;
+    }
+    .mdi::before {
+      font-size: 18px !important;
+    }
+  }
+  .btns-submenu {
+    text-decoration: none;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    min-width: 70px;
+    min-height: 3rem;
+    font-size: 14px;
+    color: $c-gray-lightest;
+    .icons,
+    .mdi {
+      margin: 0.5rem;
+    }
+  }
+  .animated-open-close {
+    display: inline-flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 60px;
+    max-width: 60px;
+    background-color: $c-gray-lighter;
+    transition-property: max-width, min-width;
+    transition-duration: 0.18s;
+    transition-timing-function: linear;
+    .side-menu-item-wrapper {
+      width: 100%;
+      padding-left: 0.1rem;
+      @include rtl {
+        padding-left: 0;
+        padding-right: 0.1rem;
+      }
+      .menu-item-name {
+        width: 100%;
+        font-size: 12px;
+        color: $c-gray;
+        text-align: left;
+        padding-left: 1.5rem;
+        @include rtl {
+          text-align: right;
+          padding-left: 0;
+          padding-right: 1.5rem;
+        }
+      }
+    }
+    .MuiAccordionSummary-root {
+      max-height: 3rem;
+      padding: 0 9px !important;
+      .MuiIconButton-root {
+        color: $c-black;
+      }
+    }
+    .MuiPaper-rounded {
+      background-color: transparent !important;
+    }
+    .MuiSvgIcon-root {
+      color: $c-gray-light;
+    }
+    .MuiPaper-elevation1 {
+      overflow: hidden;
+      box-shadow: 0 0 0 0 transparent;
+      display: grid;
+    }
+    .MuiAccordion-root:before {
+      background-color: transparent;
+    }
+    .MuiCollapse-container {
+      background-color: $c-white;
+      color: $c-black;
+    }
+    .MuiCollapse-wrapper {
+      width: 100%;
+    }
+    .MuiAccordionDetails-root {
+      padding: 0;
+      overflow-y: auto;
+      max-height: 13.5rem;
+      direction: rtl;
+      @include rtl {
+        direction: ltr;
+      }
+    }
+    .menu-item-wrapper {
+      width: 100%;
+      .menu-content-item {
+        color: $c-gray-light;
+        padding-left: 1.2rem;
+        font-size: 12px !important;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        @include rtl {
+          padding-left: 0;
+          padding-right: 1.2rem;
+        }
+        .mdi::before {
+          color: $c-gray-light;
+        }
+        &.menu-active {
+          background-color: $c-gray-lightest;
+          color: $c-black;
+          .mdi::before {
+            color: $c-black;
+          }
+        }
+      }
+    }
+    .active-item-name {
+      width: 100%;
+      background-color: $c-white;
+      color: black !important;
+      .menu-item-name {
+        color: $c-black;
+      }
+      .mdi::before {
+        color: $c-gray-dark;
+      }
+    }
+    .inactive-item-name {
+      width: 100%;
+    }
+    .open-close-content {
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      padding: 1rem 0 0.5rem;
+      width: 100%;
+      max-width: 0;
+      opacity: 0;
+    }
+
+    .open-button {
+      width: 26px;
+      height: 26px;
+      border: 2px solid black;
+      border-radius: 100%;
+      display: flex;
+      z-index: 1;
+      transform: translateX(50%);
+      background-color: transparent;
+      .mdi::before {
+        color: black;
+      }
+      @include rtl {
+        transform: translateX(-50%);
+      }
+    }
+    .side-menu-item-wrapper {
+      .MuiTouchRipple-root {
+        border-radius: 0;
+      }
+      .mdi::before {
+        font-size: 22px !important;
+      }
+    }
+    .side-menu-item {
+      width: 11rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.is-open {
+      .menu-item-summary {
+        color: $c-black;
+      }
+    }
+    transition-property: border-radius;
+    transition-duration: 0.18s;
+    &.is-close {
+      .content-wrapper {
+        max-width: 100rem !important;
+        transition-property: max-width, min-width;
+        transition-duration: 0.18s;
+      }
+      .MuiCollapse-container {
+        display: none;
+      }
+      .menu-item-summary {
+        color: $c-black;
+      }
+    }
+
+    &.on-left {
+      .open-button {
+        transform: translateX(-50%);
+        @include rtl {
+          transform: translateX(50%);
+        }
+      }
+    }
+    &.collabse-vertical {
+      min-width: 55px;
+      max-width: 55px;
+      transition-property: max-width, min-width;
+      .MuiButtonBase-root:not(.Mui-selected):not(.open-button) {
+        color: $c-blue-lighter;
+      }
+      .MuiTab-root {
+        max-width: initial;
+        transition: height 0.1s linear;
+        min-width: 100px !important;
+        .MuiTab-wrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          .mdi {
+            min-width: 35px;
+          }
+        }
+      }
+      .open-close-content {
+        overflow: visible;
+        width: 100%;
+        max-width: 170px;
+        opacity: 1;
+        transition-property: max-width, min-width;
+      }
+    }
+  }
+  .favorite-by-title-wrapper {
+    margin-top: 0.5rem;
+    display: flex;
+    background-color: rgb(226, 226, 226);
+    align-items: center;
+    font-size: 16px;
+    height: 3.5rem;
+    min-width: 103%;
+    padding-left: 1rem;
+    margin-left: -0.5rem;
+    position: relative;
+    &.is-open {
+      min-width: 0;
+      max-width: 3.7rem;
+    }
+    .favorite-by-title {
+      min-width: 7.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+    .mdi::before {
+      font-size: 24px;
+    }
+  }
+  .favorite-button {
+    position: absolute;
+    right: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    display: flex;
+    z-index: 1;
+    padding: 1.5rem;
+    .mdi::before {
+      font-size: 26px !important;
+      color: black;
+    }
+  }
+  .favorite-by-wrapper {
+    display: flex;
+    background-color: rgb(226, 226, 226);
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    height: 3.5rem;
+    min-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 30rem;
+    padding-left: 0.2rem;
+    @include rtl {
+      right: initial;
+      left: 0;
+    }
+    .filter-by-title {
+      min-width: 7.5rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .mdi::before {
+      font-size: 24px;
+    }
+  }
+  .adding-list-wrapper {
+    position: absolute;
+    right: 0;
+    top: 33rem;
+    @include rtl {
+      right: initial;
+      left: 0;
+    }
+  }
+}

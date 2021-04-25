@@ -1,0 +1,2 @@
+
+export * from './Contacts.View';

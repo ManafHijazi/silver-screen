@@ -1,0 +1,111 @@
+.hedar-options {
+  width: 100%;
+  height: 59px;
+  background-color: #f4f4f4 !important;
+}
+.CoursesView-wraperr {
+  .hedar-title {
+    font-size: 14px;
+    padding: 12px 12px 12px 44px;
+    font-weight: bold;
+  }
+
+  .card-img {
+    width: 100%;
+    height: 143px;
+    border-radius: 17px;
+  }
+
+  .card-wraper {
+    padding: 9px;
+  }
+  .card-container {
+    width: 29rem;
+    height: 23rem;
+    display: inline-flex;
+    border-radius: 19px;
+    background-color: #f4f4f4 !important;
+    -webkit-border-radius: 19px;
+    -moz-border-radius: 19px;
+    -ms-border-radius: 19px;
+    -o-border-radius: 19px;
+    padding: 9px;
+  }
+  .action-conteaner {
+    position: absolute;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    border-top: 0.7px solid #d8dade;
+    top: 86%;
+  }
+
+  .actions-btt {
+    display: inline-flex;
+    width: 33%;
+    padding: 14px;
+    font-size: 15px;
+    position: relative;
+    display: inline-flex;
+    font-weight: 700;
+    justify-content: center;
+    @include rtl {
+      border-right: 0px;
+      border-left: 0.7px solid #d8dade;
+    }
+    border-right: 0.7px solid #d8dade;
+  }
+
+  .actions-btt-l {
+    position: relative;
+    display: inline-flex;
+    font-size: 15px;
+    font-weight: 700;
+    width: 33%;
+    padding: 14px;
+    justify-content: center;
+  }
+
+  .cards-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 0.4rem;
+    padding-bottom: 0.7rem;
+    justify-content: center;
+    width: 100%;
+    @include laptops-max {
+      justify-content: center;
+    }
+
+    @include phones-max {
+      justify-content: center;
+    }
+  }
+  .card {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    .des-text {
+      width: 70%;
+    }
+
+    .bbt-start {
+      padding: 10px;
+      .MuiButton-text {
+        padding: 6px 30px;
+      }
+      .MuiButton-root {
+        color: white;
+        padding: 6px 25px;
+        font-weight: 500;
+        line-height: 1.75;
+        border-radius: 9px;
+        letter-spacing: 0.02857em;
+        text-transform: capitalize;
+        background-color: #65acfe;
+      }
+    }
+  }
+}

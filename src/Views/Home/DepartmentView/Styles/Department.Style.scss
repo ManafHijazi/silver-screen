@@ -1,0 +1,94 @@
+.Department-wraper {
+  .hedar-title {
+    width: 100%;
+    height: 59px;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: $c-header-primary;
+  }
+
+  .card-wraper {
+    padding: 9px;
+  }
+
+  .card-container {
+    width: 23rem;
+    height: 6rem;
+    display: inline-flex;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: $c-header-primary;
+  }
+
+  .cards-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 0.7rem;
+    padding-left: 2rem;
+    @include rtl {
+      padding-right: 2rem;
+      padding-left: 0;
+    }
+    @include laptops-max {
+      justify-content: center;
+    }
+
+    @include phones-max {
+      justify-content: center;
+    }
+  }
+
+  .card {
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+  }
+
+  .card-img {
+    margin-top: -0.2rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    @include rtl {
+      margin-right: 0;
+      margin-left: 1rem;
+    }
+  }
+
+  .card-title {
+    width: 100%;
+  }
+
+  .card-title-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include rtl {
+      right: initial;
+      left: 0;
+    }
+  }
+  .name {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 12px;
+  }
+
+  .des-title {
+    font-size: 12px;
+    background-color: #4fcf60;
+    width: 78px;
+    height: 19px;
+    text-align: center;
+    border-radius: 18px;
+    color: white;
+  }
+}

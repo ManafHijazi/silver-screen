@@ -1,0 +1,152 @@
+.attendance-check-in-wrapper {
+  .attendance-check-content {
+    width: 100%;
+    height: calc(100vh - 250px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .attendance-card {
+      width: 45rem;
+      height: 25rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 4rem;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 1rem;
+      background-color: #f4f4f4;
+      font-size: 32px;
+      color: #4e4e4e;
+      .user-header-title {
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+      }
+      .attendance-user-image {
+        img {
+          border-radius: 1rem;
+          width: 5rem;
+          height: 4.5rem;
+        }
+      }
+      .user-title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .user-sub-title {
+        font-size: 14px;
+      }
+      .user-pin-input {
+        .input-wrapper.theme-solid .text-field-wrapper .inputs .MuiInputBase-root {
+          padding: 1rem;
+        }
+      }
+      .card-button {
+        .MuiButtonBase-root {
+          border-radius: 0.4rem;
+          background-color: #65acfe;
+          color: $c-white;
+          width: 15rem;
+          height: 2rem;
+        }
+      }
+      .inner-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 14px;
+        .attendance-bar-number {
+          font-size: 38px;
+          background-color: #e2e2e2;
+          border-radius: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 15rem;
+          height: 6rem;
+        }
+        .attendance-bar-code {
+          background-color: $c-white;
+          padding: 0.5rem 1rem 0rem 1rem;
+          border-radius: 1rem;
+          img {
+            width: 10rem;
+            height: 6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.attendance-check-header {
+  position: sticky;
+  top: 6.3rem;
+  z-index: 999;
+  width: 100%;
+  height: 59px;
+  background-color: $c-header-primary;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .attendance-check-filter {
+    display: flex;
+    align-items: center;
+    .MuiButtonBase-root {
+      margin-right: 1rem;
+      border-radius: 0.4rem;
+      @include rtl {
+        margin-right: 0;
+        margin-left: 1rem;
+      }
+    }
+    .dots-vertical {
+      .MuiButtonBase-root {
+        background-color: $c-primary;
+        color: $c-white;
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    .filter-button {
+      .MuiButtonBase-root {
+        background-color: $c-header-button;
+        color: $c-primary;
+        width: 7rem;
+        height: 2rem;
+      }
+      .mdi {
+        margin-left: -0.5rem;
+        margin-right: 0.5rem;
+        @include rtl {
+          margin-left: 0.5rem;
+          margin-right: -0.5rem;
+        }
+      }
+    }
+    .location-button {
+      .MuiButtonBase-root {
+        background-color: $c-header-button;
+        color: $c-primary;
+        width: 7rem;
+        height: 2rem;
+      }
+    }
+  }
+  .attendance-check-search {
+    display: flex;
+    align-items: center;
+    .leave-button {
+      margin-top: -0.4rem;
+      .MuiButtonBase-root {
+        border-radius: 0.4rem;
+        background-color: #65acfe;
+        color: $c-white;
+        width: 7rem;
+        height: 2rem;
+      }
+    }
+  }
+}

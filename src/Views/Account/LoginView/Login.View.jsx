@@ -2,23 +2,21 @@ import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
-import { connect, useDispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 // import defaultLogo from '../../../assets/images/defaults/logo-crm.svg';
-import {
- showSuccess, showError, GlobalHistory, languageChange
-} from '../../../Helper';
+import { showSuccess, showError, GlobalHistory, languageChange } from '../../../Helper';
 import { config } from '../../../config';
 // import { ApplicationLogin } from '../../services';
-import { LOGIN } from '../../../store/login/Actions';
+// import { LOGIN } from '../../../store/login/Actions';
 import { CheckboxesComponent, Inputs, SelectComponet } from '../../../Components';
 
 const translationPath = '';
 const parentTranslationPath = 'LoginView';
 function LoginView({ loginResponse }) {
   const { t } = useTranslation('LoginView');
-  const dispatch = useDispatch(LOGIN);
+  // const dispatch = useDispatch(LOGIN);
   // const history = useHistory();
   const [loginDto, setLoginDto] = useState({
     identity: '',
@@ -38,7 +36,11 @@ function LoginView({ loginResponse }) {
   const handleSubmit = (event) => {
     setisclick(true);
     event.preventDefault();
-    if (validationHandler()) dispatch(LOGIN(loginDto));
+    if (validationHandler()) {
+      // dispatch(LOGIN(loginDto));
+      localStorage.setItem('session', JSON.stringify(loginDto));
+      GlobalHistory.push('/home');
+    }
   };
   useEffect(() => {
     if (loginResponse && !animationStart) {
@@ -134,8 +136,7 @@ function LoginView({ loginResponse }) {
                   <Button
                     className='btns theme-solid'
                     type='submit'
-                    disabled={isclick || !loginDto.identity || !loginDto.password}
-                  >
+                    disabled={isclick || !loginDto.identity || !loginDto.password}>
                     <span>{t(`${translationPath}start`)}</span>
                   </Button>
                   <span className='mdi mdi-chevron-double-right animated-icon' />

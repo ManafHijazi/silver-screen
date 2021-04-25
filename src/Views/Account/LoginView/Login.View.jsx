@@ -6,17 +6,20 @@ import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 // import defaultLogo from '../../../assets/images/defaults/logo-crm.svg';
-import { showSuccess, showError, GlobalHistory, languageChange } from '../../../Helper';
+import {
+ showSuccess, showError, GlobalHistory, languageChange
+} from '../../../Helper';
 import { config } from '../../../config';
 // import { ApplicationLogin } from '../../services';
 // import { LOGIN } from '../../../store/login/Actions';
 import { CheckboxesComponent, Inputs, SelectComponet } from '../../../Components';
+// import { LOGIN_SUCCESS } from '../../../store/login/Actions';
 
 const translationPath = '';
 const parentTranslationPath = 'LoginView';
 function LoginView({ loginResponse }) {
   const { t } = useTranslation('LoginView');
-  // const dispatch = useDispatch(LOGIN);
+  // const dispatch = useDispatch(LOGIN_SUCCESS);
   // const history = useHistory();
   const [loginDto, setLoginDto] = useState({
     identity: '',
@@ -37,17 +40,34 @@ function LoginView({ loginResponse }) {
     setisclick(true);
     event.preventDefault();
     if (validationHandler()) {
-      // dispatch(LOGIN(loginDto));
-      localStorage.setItem('session', JSON.stringify(loginDto));
-      GlobalHistory.push('/home');
+      // dispatch(LOGIN_SUCCESS(loginDto));
+      localStorage.setItem(
+        'session',
+        JSON.stringify({
+          email: 'manaf@gmail.com',
+          expiration: '2021-04-26T19:02:09Z',
+          fileToken: 'k4LAPeJpEKgraC0ZhsE8Q',
+          fullName: 'Manaf Mohammed Hijazi',
+          phoneNumber: '0790000000',
+          profileImg: '1f0a5901-3d3e-43a1-98c5-d50617fe7272',
+          refreshToken: '4277d8a2-7f99-4525-4bf6-08d8f4a5f11f',
+          userId: '3311e798-93f9-4f91-bef3-abdfd8d40d81',
+          userName: 'hijazi',
+        })
+      );
+      showSuccess('Login Succssfuly');
+      setAnimationStartClasses(' in-animate');
+      setAnimationStart(true);
+      setTimeout(() => {
+        GlobalHistory.push('/home');
+      }, 300);
+      setisclick(false);
     }
   };
   useEffect(() => {
     if (loginResponse && !animationStart) {
       if (loginResponse.token) {
-        // setCookie('session', loginResponse.token, { path: '/' });
         localStorage.setItem('session', JSON.stringify(loginResponse));
-        // history.push('/main');
         showSuccess('Login Succssfuly');
         setAnimationStartClasses(' in-animate');
         setAnimationStart(true);
@@ -56,7 +76,6 @@ function LoginView({ loginResponse }) {
         }, 300);
         setisclick(false);
       } else {
-        // setIsLoading(false);
         showError(t(`${loginResponse.Message}`));
         setisclick(false);
       }
@@ -136,7 +155,8 @@ function LoginView({ loginResponse }) {
                   <Button
                     className='btns theme-solid'
                     type='submit'
-                    disabled={isclick || !loginDto.identity || !loginDto.password}>
+                    disabled={isclick || !loginDto.identity || !loginDto.password}
+                  >
                     <span>{t(`${translationPath}start`)}</span>
                   </Button>
                   <span className='mdi mdi-chevron-double-right animated-icon' />

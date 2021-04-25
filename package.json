@@ -102,6 +102,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy": "http://restcountries.eu",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",

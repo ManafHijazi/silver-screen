@@ -106,7 +106,7 @@ export const UserMenuView = memo(({ logout }) => {
   );
 
   return (
-    <div className='cards'>
+    <div className='cards user-header-menu'>
       <div className='card-content'>
         <Spinner isActive={isLoading} isAbsolute />
         <div className='d-flex-column-center'>
